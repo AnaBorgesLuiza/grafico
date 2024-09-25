@@ -4,8 +4,8 @@ async function quantidadeUsuarios() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
     const res = await fetch(url)
     const dados = await res.json()
-    const nomeDasRedes = Object.keys(dados)
-    const quantidadeUsuarios = Object.values(dados)
+    const nomeDasRedes = ["Cristiano Ronaldo","Lionel Messi","Selena Gomez","Kylie Jenner","The Rock","Ariana Grande","Kim Kardashian","Beyonce", "Justin Bieber","Kendall Jenner", "Taylor Swift",]
+    const quantidadeUsuarios = ["640000000","504000000","424000000","396000000", "395000000","376000000","360000000","316000000", "294000000","291000000","284000000",]
     const data = [
         {
             x: nomeDasRedes,
@@ -21,7 +21,7 @@ async function quantidadeUsuarios() {
         plot_bgcolor: getCSS('--cor-de-fundo'),
         paper_bgcolor: getCSS('--cor-de-fundo'),
         title: {
-            text: 'pessoas mais seguidas do mundo no instagram',
+            text: 'Pessoas mais seguidas do mundo no instagram',
             font: {
                 color: getCSS('--cor-principal'),
                 family: getCSS('--fonte'),
@@ -40,7 +40,7 @@ async function quantidadeUsuarios() {
         yaxis: {
             tickfont: tickConfig,
             title: {
-                text: '',
+                text: 'Número de seguidores',
                 font: {
                     color: getCSS('--cor-secundaria')
                 }
